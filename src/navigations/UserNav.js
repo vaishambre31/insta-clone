@@ -3,6 +3,7 @@ import { Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Feed, Search, Profile, Reel, Activity } from './screens';
+import { FeedStack } from './stack';
 import { Icon } from 'native-base';
 import { colorPrimary, colorSecondary } from '../styles/colors';
 import { useSelector } from 'react-redux';
@@ -25,7 +26,7 @@ export default (props) => {
         >
             <Tab.Screen
                 name="Feed"
-                component={Feed}
+                component={FeedStack}
                 options={{
                     tabBarColor: colorPrimary,
                     tabBarIcon: ({ color, size, focused }) => (

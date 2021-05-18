@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text, FlatList, Image, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, FlatList, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
 import Images from '../../../../assets/images'
 import CommonImage from '../../../../components/common/CommonImage'
 import { colorPrimary, textColor } from '../../../../styles/colors'
 import { FONT_FAMILY_OpenSans_Regular, FONT_FAMILY_OpenSans_Light, FONT_FAMILY_OpenSans_SemiBold } from '../../../../styles/typography'
 
-const Stories = () => {
+const Stories = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -40,10 +40,13 @@ const Stories = () => {
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item }) => (
-                        <View style={{
-                            marginHorizontal: 8,
-                            // borderWidth: 1
-                        }}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('OpenStory')}
+                            style={{
+                                marginHorizontal: 8,
+                                // borderWidth: 1
+                            }}
+                        >
                             <CommonImage
                                 imageUrl={Images.steel}
                                 height={70}
@@ -61,7 +64,7 @@ const Stories = () => {
                             >
                                 rodur4891
                         </Text>
-                        </View>
+                        </TouchableOpacity>
                     )}
                 />
             </ScrollView>

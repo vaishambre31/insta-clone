@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-const Loader = () => {
+const ViewStory = () => {
     return (
         <View>
-            <Text></Text>
+            <Text>Story screen loaded</Text>
         </View>
     )
 }
 
-export default Loader
+export default ViewStory

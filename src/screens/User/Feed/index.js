@@ -32,7 +32,7 @@ const index = (props) => {
 
             <FlatList
                 keyExtractor={(item, index) => index.toString()}
-                ListHeaderComponent={<Stories />}
+                ListHeaderComponent={<Stories navigation={props.navigation} />}
                 data={FEED}
                 renderItem={({ item, index }) => (
                     <Post

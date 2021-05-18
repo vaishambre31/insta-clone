@@ -7,6 +7,7 @@ import Profile from '../screens/User/Profile';
 import Search from '../screens/User/Search';
 import Reel from '../screens/User/Reel';
 import Activity from '../screens/User/Activity';
+import OpenStory from '../screens/User/Feed/OpenStory';
 
 export {
     Feed,
@@ -14,5 +15,6 @@ export {
     Search,
     Reel,
     Activity,
-    LoginScreen
+    LoginScreen,
+    OpenStory
 }
